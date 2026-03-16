@@ -41,7 +41,15 @@ iic_verilog_formatter/
 │   ├── verilog_formatter.v   # 格式化器核心
 │   └── top_i2c_formatter.v   # 顶层模块
 ├── sim/                      # 仿真测试
-│   └── tb_i2c_formatter.v    # 测试平台
+│   ├── tb_i2c_formatter.v        # 基础功能测试
+│   ├── tb_i2c_formatter_full.v   # 完整功能测试
+│   ├── tb_format_verify.v        # 格式化验证测试
+│   └── debug/                    # 调试测试文件
+│       ├── tb_debug_*.v          # 单元调试测试
+│       ├── tb_check_mem.v        # 内存检查测试
+│       ├── tb_hex.v              # 十六进制测试
+│       ├── tb_ram_test.v         # RAM 测试
+│       └── tb_format_verify_*.v  # 格式化调试测试
 ├── pc_tool/                  # PC 端工具
 │   └── i2c_formatter_tool.py # Python 客户端
 ├── docs/                     # 文档
